@@ -47,6 +47,7 @@ lspsaga.setup({
 		virtual_text = true,
 	},
 	diagnostic = {
+		bg = "",
 		on_insert = false,
 		on_insert_follow = false,
 		insert_winblend = 0,
