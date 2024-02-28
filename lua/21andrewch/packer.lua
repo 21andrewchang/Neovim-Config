@@ -31,8 +31,10 @@ return packer.startup(function(use)
 	use("wbthomason/packer.nvim")
 	use("nvim-lua/plenary.nvim")
 
+	-- not really used
 	use("folke/twilight.nvim")
-	--color theme
+
+	-- theme stuff
 	use({
 		"mcchrish/zenbones.nvim",
 		-- Optionally install Lush. Allows for more configuration or extending the colorscheme
@@ -41,7 +43,7 @@ return packer.startup(function(use)
 		requires = "rktjmp/lush.nvim",
 	})
 	use("nvim-tree/nvim-web-devicons")
-	use("nvim-lualine/lualine.nvim")
+	-- use("nvim-lualine/lualine.nvim")
 	use("lukas-reineke/indent-blankline.nvim")
 	use("jose-elias-alvarez/null-ls.nvim")
 	use("jay-babu/mason-null-ls.nvim")

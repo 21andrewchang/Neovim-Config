@@ -1,2 +1,7 @@
-### Neovim Config
-# Neovim-Config
+# Neovim Config
+
+### Plugins
+
+### Remaps
+
+### Bindings
