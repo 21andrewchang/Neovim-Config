@@ -92,7 +92,6 @@ ins_left({
 })
 ins_left({
 	"diff",
-	-- Is it me or the symbol for modified us really weird
 	always_visible = true,
 	symbols = { added = " ", modified = "󰝤 ", removed = " " },
 	diff_color = {
@@ -156,7 +155,7 @@ ins_right({
 	function()
 		return clock()
 	end,
-	icon = "",
+	icon = "",
 	color = { fg = "NONE", gui = "bold" },
 	padding = { right = 2 },
 })
