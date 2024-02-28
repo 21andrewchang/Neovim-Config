@@ -43,14 +43,10 @@ local config = {
 			-- right section. Both are highlighted by c theme .  So we
 			-- are just setting default looks o statusline
 			normal = {
-				a = { fg = colors.fg, bg = nil },
-				m = { fg = colors.fg, bg = nil },
-				x = { fg = colors.fg, bg = nil },
+				c = { fg = colors.fg, bg = nil },
 			},
 			inactive = {
-				a = { fg = colors.fg, bg = nil },
-				m = { fg = colors.fg, bg = nil },
-				x = { fg = colors.fg, bg = nil },
+				c = { fg = colors.fg, bg = nil },
 			},
 		},
 	},
@@ -76,7 +72,7 @@ local config = {
 
 -- Inserts a component in lualine_c at left section
 local function ins_left(component)
-	table.insert(config.sections.lualine_a, component)
+	table.insert(config.sections.lualine_c, component)
 end
 
 -- Inserts a component in lualine_x at right section
