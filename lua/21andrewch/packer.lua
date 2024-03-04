@@ -35,6 +35,7 @@ return packer.startup(function(use)
 	use("folke/twilight.nvim")
 
 	-- theme stuff
+	use("CodeGradox/onehalf-lush")
 	use({
 		"mcchrish/zenbones.nvim",
 		-- Optionally install Lush. Allows for more configuration or extending the colorscheme

@@ -148,15 +148,6 @@ local function clock()
 end
 
 ins_right({
-	function()
-		return clock()
-	end,
-	icon = "",
-	color = { fg = "NONE", gui = "bold" },
-	padding = { right = 2 },
-})
-
-ins_right({
 	"diagnostics",
 	always_visible = true,
 	sources = { "nvim_diagnostic" },
@@ -167,9 +158,17 @@ ins_right({
 		info = { fg = colors.blue },
 		hint = { fg = colors.magenta },
 	},
-	padding = { right = 4 },
+	padding = { right = 2 },
 })
 
+ins_right({
+	function()
+		return clock()
+	end,
+	icon = "",
+	color = { fg = "NONE", gui = "bold" },
+	padding = { right = 4 },
+})
 -- Now don't forget to initialize lualine
 lualine.setup(config)
 -- require("lualine").hide()
