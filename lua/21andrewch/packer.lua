@@ -31,6 +31,12 @@ return packer.startup(function(use)
 	use("wbthomason/packer.nvim")
 	use("nvim-lua/plenary.nvim")
 	use("ecthelionvi/NeoColumn.nvim")
+	use({
+		"VonHeikemen/fine-cmdline.nvim",
+		requires = {
+			{ "MunifTanjim/nui.nvim" },
+		},
+	})
 	-- not really used
 	use("folke/twilight.nvim")
 
