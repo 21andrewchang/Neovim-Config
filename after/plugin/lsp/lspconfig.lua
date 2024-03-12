@@ -43,6 +43,7 @@ local servers = {
 	"svelte",
 	"prismals",
 	"clangd",
+	"html",
 }
 
 lspconfig["lua_ls"].setup({
