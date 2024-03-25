@@ -42,7 +42,6 @@ return packer.startup(function(use)
 	use("folke/twilight.nvim")
 
 	-- theme stuff
-	use("projekt0n/github-nvim-theme")
 	use("CodeGradox/onehalf-lush")
 	use({
 		"mcchrish/zenbones.nvim",
