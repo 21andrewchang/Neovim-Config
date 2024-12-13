@@ -29,6 +29,7 @@ end
 return packer.startup(function(use)
 	-- Packer can manage itself
 	use({ "nvim-neotest/nvim-nio" })
+	use({ "projekt0n/github-nvim-theme" })
 	use("wbthomason/packer.nvim")
 	use("nvim-lua/plenary.nvim")
 	use("ecthelionvi/NeoColumn.nvim")

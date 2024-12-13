@@ -1,6 +1,6 @@
 local neocol = require("NeoColumn")
 local config = {
-	fg_color = "#FFF",
+	fg_color = "#FFFFFF",
 	bg_color = "#DC686B",
 	NeoColumn = "80",
 	always_on = true,
