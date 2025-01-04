@@ -200,11 +200,6 @@ _G.packer_plugins = {
     path = "/Users/andrewchang/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
-  ["lush.nvim"] = {
-    loaded = true,
-    path = "/Users/andrewchang/.local/share/nvim/site/pack/packer/start/lush.nvim",
-    url = "https://github.com/rktjmp/lush.nvim"
-  },
   ["markdown-preview.nvim"] = {
     loaded = false,
     needs_bufread = false,
@@ -329,11 +324,6 @@ _G.packer_plugins = {
     path = "/Users/andrewchang/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
-  ["onehalf-lush"] = {
-    loaded = true,
-    path = "/Users/andrewchang/.local/share/nvim/site/pack/packer/start/onehalf-lush",
-    url = "https://github.com/CodeGradox/onehalf-lush"
-  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/andrewchang/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -359,6 +349,14 @@ _G.packer_plugins = {
     path = "/Users/andrewchang/.local/share/nvim/site/pack/packer/start/refactoring.nvim",
     url = "https://github.com/ThePrimeagen/refactoring.nvim"
   },
+  ["render-markdown.nvim"] = {
+    config = { "\27LJ\2\nA\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\20render-markdown\frequire\0" },
+    load_after = {},
+    loaded = true,
+    needs_bufread = false,
+    path = "/Users/andrewchang/.local/share/nvim/site/pack/packer/opt/render-markdown.nvim",
+    url = "https://github.com/MeanderingProgrammer/render-markdown.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/andrewchang/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -368,11 +366,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/andrewchang/.local/share/nvim/site/pack/packer/start/trouble.nvim",
     url = "https://github.com/folke/trouble.nvim"
-  },
-  ["twilight.nvim"] = {
-    loaded = true,
-    path = "/Users/andrewchang/.local/share/nvim/site/pack/packer/start/twilight.nvim",
-    url = "https://github.com/folke/twilight.nvim"
   },
   undotree = {
     loaded = true,
@@ -408,11 +401,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/andrewchang/.local/share/nvim/site/pack/packer/start/zen-mode.nvim",
     url = "https://github.com/folke/zen-mode.nvim"
-  },
-  ["zenbones.nvim"] = {
-    loaded = true,
-    path = "/Users/andrewchang/.local/share/nvim/site/pack/packer/start/zenbones.nvim",
-    url = "https://github.com/mcchrish/zenbones.nvim"
   }
 }
 
@@ -433,6 +421,15 @@ time([[Config for Comment.nvim]], false)
 time([[Config for nvim-highlight-colors]], true)
 try_loadstring("\27LJ\2\nC\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\26nvim-highlight-colors\frequire\0", "config", "nvim-highlight-colors")
 time([[Config for nvim-highlight-colors]], false)
+-- Load plugins in order defined by `after`
+time([[Sequenced loading]], true)
+vim.cmd [[ packadd nvim-treesitter ]]
+vim.cmd [[ packadd render-markdown.nvim ]]
+
+-- Config for: render-markdown.nvim
+try_loadstring("\27LJ\2\nA\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\20render-markdown\frequire\0", "config", "render-markdown.nvim")
+
+time([[Sequenced loading]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads

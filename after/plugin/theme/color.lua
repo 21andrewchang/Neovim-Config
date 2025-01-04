@@ -18,3 +18,14 @@ vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none", fg = "none" })
 vim.cmd([[hi NvimTreeNormal guibg=NONE ctermbg=NONE]])
 vim.cmd([[hi Normal guibg=NONE ctermbg=NONE]])
 vim.cmd([[hi NormalNC guibg=NONE ctermbg=NONE]])
+
+-- gets rid of the background color of the top bar for both focused + unfocused
+vim.cmd([[
+    highlight TabLine guibg=NONE
+    highlight TabLineFill guibg=NONE
+    highlight TabLineSel guibg=NONE
+    highlight WinBar guibg=NONE
+    highlight WinBarNC guibg=NONE
+    highlight Normal guibg=NONE
+    highlight NormalNC guibg=NONE
+]])

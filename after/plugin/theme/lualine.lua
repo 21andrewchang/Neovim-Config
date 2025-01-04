@@ -84,7 +84,7 @@ ins_left({
 	"branch",
 	icon = "",
 	color = { fg = colors.blue, gui = "bold" },
-	padding = { left = 4, right = 1 },
+	padding = { left = 2, right = 1 },
 })
 ins_left({
 	"diff",
@@ -149,7 +149,7 @@ end
 
 ins_right({
 	"diagnostics",
-	always_visible = true,
+	always_visible = false,
 	sources = { "nvim_diagnostic" },
 	symbols = { error = " ", warn = " ", info = " ", hint = " " },
 	diagnostics_color = {
@@ -167,7 +167,7 @@ ins_right({
 	end,
 	icon = "",
 	color = { fg = "NONE", gui = "bold" },
-	padding = { right = 4 },
+	padding = { right = 0 },
 })
 -- Now don't forget to initialize lualine
 lualine.setup(config)

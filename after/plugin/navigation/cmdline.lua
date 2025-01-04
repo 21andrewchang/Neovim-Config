@@ -8,8 +8,8 @@ require("fine-cmdline").setup({
 	},
 	popup = {
 		position = {
-			row = "50%",
-			col = "50%",
+			row = "0%",
+			col = "100%",
 		},
 		size = {
 			width = "40%",

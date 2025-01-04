@@ -39,17 +39,15 @@ return packer.startup(function(use)
 			{ "MunifTanjim/nui.nvim" },
 		},
 	})
-	-- not really used
-	use("folke/twilight.nvim")
-
-	-- theme stuff
-	use("CodeGradox/onehalf-lush")
 	use({
-		"mcchrish/zenbones.nvim",
-		-- Optionally install Lush. Allows for more configuration or extending the colorscheme
-		-- If you don't want to install lush, make sure to set g:zenbones_compat = 1
-		-- In Vim, compat mode is turned on as Lush only works in Neovim.
-		requires = "rktjmp/lush.nvim",
+		"MeanderingProgrammer/render-markdown.nvim",
+		after = { "nvim-treesitter" },
+		-- requires = { "echasnovski/mini.nvim", opt = true }, -- if you use the mini.nvim suite
+		-- requires = { 'echasnovski/mini.icons', opt = true }, -- if you use standalone mini plugins
+		requires = { "nvim-tree/nvim-web-devicons", opt = true }, -- if you prefer nvim-web-devicons
+		config = function()
+			require("render-markdown").setup({})
+		end,
 	})
 	use("nvim-tree/nvim-web-devicons")
 	use("nvim-lualine/lualine.nvim")
